@@ -1,0 +1,90 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: MongolianMT
+  name: 胡都木蒙古文
+  version: '0.4'
+  author:
+    - Martin的杂货铺 <martinscsjt@gmail.com>
+  description: |
+    Xudum Mongolian input method
+
+switches: 
+  - name: ascii_mode
+    reset: 0
+    states: [ 蒙, En ]
+  - name: full_shape
+    states: [ 半, 全 ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - reverse_lookup_translator
+    - table_translator
+  filters:
+    - uniquifier
+    - single_char_filter
+    - lua_filter@*mongolian_punc_filter
+
+speller:
+  alphabet: '/0123456789aeiouOUEngbpxmlshtdcjyrwfkzZCNA'':'
+  delimiter: ' '
+  auto_select: true
+
+translator:
+  dictionary: MongolianMT
+  enable_sentence: false
+  enable_user_dict: false
+  comment_format:
+    - xform/^~//
+
+punctuator:
+  half_shape:
+    "&" : ["᠀", "&"]
+    "^" : ["᠁", "\u200c", "^"]
+    "," : ["᠂", ","]
+    "." : ["᠃", "."]
+    ":" : ["᠄", ":"]
+    "#" : ["᠅", "#"]
+    "-" : ["᠊", "\u202f", "-"]
+    "'" : ["\u180b", "\u180c", "\u180d", "\u180f", "'"]
+    "`" : ["\u180e", "`"]
+    "_" : ["ᢩ", "_"]
+    "*" : ["\u200d", "*"]
+  full_shape:
+    ";" : ";"
+    ":" : ":"
+    "." : "."
+    "?" : "?"
+    "<" : "<"
+    ">" : ">"
+    "[" : "["
+    "]" : "]"
+    "\"" : "\""
+    "'" : "'"
+    "(" : "("
+    ")" : ")"
+    "/" : "/"
+    "\\" : "\\"
+    "!" : "!"
+    "," : ","
+    "{" : "{"
+    "}" : "}"
+key_binder:
+  import_preset: default

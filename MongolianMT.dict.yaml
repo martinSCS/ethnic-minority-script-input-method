@@ -1,0 +1,89 @@
+# Rime dictionary
+# encoding: utf-8
+#
+# Xudum Mongolian input method
+#
+# Table author:
+#  - Martin的杂货铺 <martinscsjt@gmail.com>
+#
+
+---
+name: MongolianMT
+version: "0.1"
+sort: original
+...
+
+#Lower case symbols
+᠐	/0
+᠑	/1
+᠒	/2
+᠓	/3
+᠔	/4
+᠕	/5
+᠖	/6
+᠗	/7
+᠘	/8
+᠙	/9
+ᠠ	a
+ᠡ	e
+ᠢ	i
+ᠣ	o
+ᠤ	u
+ᠥ	O
+ᠦ	U
+ᠧ	E
+ᠨ	n
+ᠩ	ng
+ᠪ	b
+ᠫ	p
+ᠬ	x
+ᠭ	g
+ᠮ	m
+ᠯ	l
+ᠰ	s
+ᠱ	sh
+ᠲ	t
+ᠳ	d
+ᠴ	ch
+ᠵ	j
+ᠶ	y
+ᠷ	r
+ᠸ	w
+ᠸ	v
+ᠹ	f
+ᠺ	G
+ᠻ	k
+ᠼ	c
+ᠽ	z
+ᠾ	h
+ᠿ	zh
+ᡀ	lh
+ᡁ	Zh
+ᡂ	Ch
+ᡛ	N
+ᢀ	//m
+ᢁ	//h
+ᢂ	//A
+ᢃ	//O
+ᢄ	//OO
+ᢅ	//'
+ᢆ	//:'
+ᢇ	//a
+ᢈ	//i
+ᢉ	//k
+ᢊ	//ng
+ᢋ	//c
+ᢌ	//tt
+ᢍ	//tth
+ᢎ	//dd
+ᢏ	//nn
+ᢐ	//t
+ᢑ	//d
+ᢒ	//p
+ᢓ	//ph
+ᢔ	//ss
+ᢕ	//zh
+ᢖ	//zh
+ᢗ	//ah
+ᢦ	//u
+ᢧ	//y

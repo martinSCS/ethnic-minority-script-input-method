@@ -1,0 +1,106 @@
+﻿# Rime schema settings
+schema:
+  schema_id: ugfromlatin
+  name: ئۇيغۇرچە (Latin ==> ئەرەب)
+  version: "1.2.0"
+  author: 
+    - Martin的杂货铺
+  description: |
+    维吾尔语拉丁输入方案，以现行的拉丁维文为蓝本创制输入码，对应输出传统维文。
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ ئۇيغۇرچە, English ]
+  - name: full_shape
+    reset: 0
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - reverse_lookup_translator
+    - table_translator
+  filters:
+    - uniquifier
+    - single_char_filter
+
+speller:
+  alphabet: abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+  delimiter: " '"
+
+translator:
+  dictionary: ugfromlatin
+  enable_sentence: true
+  enable_encoder: true
+  sentence_over_completion: true
+  encode_commit_history: true
+  preedit_format:
+    - "xform/uv/$1ü/"
+    - "xform/ev/$1Ë/"
+    - "xform/ov/$1ö/"
+    - "xform/Uv/$1Ü/"
+    - "xform/Ev/$1ë/"
+    - "xform/Ov/$1Ö/"
+
+punctuator:
+  half_shape:
+    ";" : "؛"
+    ":" : ":"
+    "." : "."
+    "?" : "؟"
+    "<" : "«"
+    ">" : "»"
+    "[" : "["
+    "]" : "]"
+    "\"" : "\""
+    "'" : "'"
+    "(" : "("
+    ")" : ")"
+    "/" : "/"
+    "\\" : "\\"
+    "!" : "!"
+    "," : "،"
+    "{" : "{"
+    "}" : "}"
+  full_shape:
+    ";" : ";"
+    ":" : ":"
+    "." : "."
+    "?" : "?"
+    "<" : "<"
+    ">" : ">"
+    "[" : "["
+    "]" : "]"
+    "\"" : "\""
+    "'" : "'"
+    "(" : "("
+    ")" : ")"
+    "/" : "/"
+    "\\" : "\\"
+    "!" : "!"
+    "," : ","
+    "{" : "{"
+    "}" : "}"
+key_binder:
+  import_preset: default
+
+recognizer:
+  import_preset: default
+  patterns:
+    punct: '^/([0-9]0?|[A-Za-z]+)$'
+    reverse_lookup: "`[a-z]*'?$|[a-z]+'$"

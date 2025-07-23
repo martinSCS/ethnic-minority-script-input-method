@@ -1,0 +1,97 @@
+# Rime schema settings
+schema:
+  schema_id: kkfromlatin
+  name: قازاقشا (Latin ==> اراب)
+  version: "0.0.1"
+  author: 
+    - Martin的杂货铺
+  description: |
+    哈萨克语拉丁输入方案，以自制的拉丁转写为蓝本创制输入码，对应输出传统哈萨文。
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ قازاقشا, English ]
+  - name: full_shape
+    reset: 0
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - reverse_lookup_translator
+    - table_translator
+  filters:
+    - uniquifier
+    - single_char_filter
+
+speller:
+  alphabet: abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  delimiter: ""
+
+translator:
+  dictionary: kkfromlatin
+  enable_sentence: true
+  enable_encoder: true
+  sentence_over_completion: true
+  encode_commit_history: true
+
+punctuator:
+  half_shape:
+    ";" : "؛"
+    ":" : ":"
+    "." : "."
+    "?" : "؟"
+    "<" : "«"
+    ">" : "»"
+    "[" : "["
+    "]" : "]"
+    "\"" : "\""
+    "(" : "("
+    ")" : ")"
+    "/" : "/"
+    "\\" : "\\"
+    "!" : "!"
+    "," : "،"
+    "{" : "{"
+    "}" : "}"
+  full_shape:
+    ";" : ";"
+    ":" : ":"
+    "." : "."
+    "?" : "?"
+    "<" : "<"
+    ">" : ">"
+    "[" : "["
+    "]" : "]"
+    "\"" : "\""
+    "(" : "("
+    ")" : ")"
+    "/" : "/"
+    "\\" : "\\"
+    "!" : "!"
+    "," : ","
+    "{" : "{"
+    "}" : "}"
+key_binder:
+  import_preset: default
+
+recognizer:
+  import_preset: default
+  patterns:
+    punct: '^/([0-9]0?|[A-Za-z]+)$'
+    reverse_lookup: "`[a-z]*'?$|[a-z]+'$"
