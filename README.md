@@ -20,7 +20,7 @@
 
 ### 维吾尔文
 
-维吾尔文输入法的键码基于[拉丁维吾尔文](https://zh.wikipedia.org/wiki/%E6%8B%89%E4%B8%81%E7%BB%B4%E6%96%87)设定，使用拉丁转写来降低记忆难度。输入法配备了12万词库，但可能不包括附带黏着成分的词。其中“<span style="direction: ltr; unicode-bidi: embed">ۈ</span>”“<span style="direction: ltr; unicode-bidi: embed">ې</span>”“<span style="direction: ltr; unicode-bidi: embed">ۆ</span>”等的拉丁转写分别为在u、e、o后加一个v。以“<span style="direction: ltr; unicode-bidi: embed">ئ&zwj;</span>”开头的元音字母需要使用对应拉丁字母的大写字母，例如“<span style="direction: ltr; unicode-bidi: embed">ئا</span>”应当使用“A”来转写，“<span style="direction: ltr; unicode-bidi: embed">ئۈ</span>”应当使用“Uv”来转写。不过在词库中已有的词，可以直接使用小写字母替换。
+维吾尔文输入法的键码基于[拉丁维吾尔文](https://zh.wikipedia.org/wiki/%E6%8B%89%E4%B8%81%E7%BB%B4%E6%96%87)设定，使用拉丁转写来降低记忆难度。输入法配备了12万词库，但可能不包括附带黏着成分的词。其中「<span style="direction: ltr; unicode-bidi: embed">ۈ</span>」「<span style="direction: ltr; unicode-bidi: embed">ې」「ۆ</span>」等的拉丁转写分别为在u、e、o后加一个v。以“<span style="direction: ltr; unicode-bidi: embed">ئ&zwj;</span>”开头的元音字母需要使用对应拉丁字母的大写字母，例如“<span style="direction: ltr; unicode-bidi: embed">ئا</span>”应当使用“A”来转写，“<span style="direction: ltr; unicode-bidi: embed">ئۈ</span>”应当使用“Uv”来转写。不过在词库中已有的词，可以直接使用小写字母替换。
 
 ### 哈萨克文
 
