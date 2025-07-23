@@ -201,7 +201,7 @@
 
 ### 凉山规范彝文
 
-凉山规范彝文参考[拉丁化彝文表](https://zh.wikipedia.org/wiki/%E5%BD%9D%E6%96%87)，也可参考下图。
+凉山规范彝文参考[拉丁化彝文表](https://zh.wikipedia.org/wiki/%E5%BD%9D%E6%96%87#涼山規範彝文)，也可参考下图。
 
 ![拉丁化彝文](src/Yi_Syllabary_Chart.svg)
 
